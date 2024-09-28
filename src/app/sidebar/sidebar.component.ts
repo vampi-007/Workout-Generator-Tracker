@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Exercise, User } from '../header/users/user.model';
 
 @Component({
@@ -11,8 +11,10 @@ import { Exercise, User } from '../header/users/user.model';
 export class SidebarComponent {
   @Input({required:true})exercises!:Exercise[]|undefined;
   @Input({required:true}) currentUser!:User;
-  constructor(){
-    // console.log(this.exercises)
-    // console.log(this.currentUser)
+  @Output() exercise = new EventEmitter<string>();
+
+  onChangeExercise(exerciseId : string| undefined){
+    this.exercise.emit(exerciseId)
   }
+  
 }

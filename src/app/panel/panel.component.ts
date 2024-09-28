@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Exercise } from '../header/users/user.model';
 
 @Component({
   selector: 'app-panel',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './panel.component.css'
 })
 export class PanelComponent {
-
+  @Input({required:true}) exercise:Exercise|undefined;
+  
 }

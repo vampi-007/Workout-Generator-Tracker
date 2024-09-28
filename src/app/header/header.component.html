@@ -6,10 +6,10 @@
     <div class="navbar">
         <!-- Dynamic -->
         <ul>
-            @for(exercise of currentUser?.exercises; track exercise.exerciseId){
+            @for(category of categories; track category){
                 <li>
-                    <button type="button" (click)="changeCategory(exercise.category)">
-                        {{exercise.category}}
+                    <button type="button" (click)="changeCategory(category)">
+                        {{category}}
                     </button>    
                 </li>
             }

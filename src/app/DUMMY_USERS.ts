@@ -1,7 +1,7 @@
 export const DUMMY_USER = [
     {
         id:"u1",
-        name:"rebecca",
+        name:"Rebecca",
         avatar:"user-1.jpg",
         exercises: [
             {
@@ -26,7 +26,7 @@ export const DUMMY_USER = [
     },
     {
         id:"u2",
-        name:"alison",
+        name:"Alison",
         avatar:"user-2.jpg",
         exercises: [
             {
@@ -37,12 +37,24 @@ export const DUMMY_USER = [
             },
             {
                 exerciseId:"e2",
+                category:"Cardio",
+                exerciseName:"Jumping",
+                reps:"1 lap" 
+            },
+            {
+                exerciseId:"e3",
                 category:"Strenght",
                 exerciseName:"Bench press",
                 reps:"10-12"
             },
             {
-                exerciseId:"e3",
+                exerciseId:"e4",
+                category:"Strenght",
+                exerciseName:"dips",
+                reps:"10-12"
+            },
+            {
+                exerciseId:"e5",
                 category:"Muscle Gain",
                 exerciseName:"Smith Machine",
                 reps:"6-8"
@@ -51,7 +63,7 @@ export const DUMMY_USER = [
     },
     {
         id:"u3",
-        name:"john",
+        name:"John",
         avatar:"user-3.jpg",
         exercises: [
             {

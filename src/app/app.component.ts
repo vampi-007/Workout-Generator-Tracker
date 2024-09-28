@@ -19,6 +19,7 @@ export class AppComponent {
   selectedUserId?: string ;
   currentUser:User|undefined;
   exercises:Exercise[]|undefined;
+  exercise:Exercise|undefined;
   get selectedExercises(){
     return this.exercises;
   } 
@@ -37,6 +38,10 @@ export class AppComponent {
   }
   onSelectCategory(category: string){
     this.exercises = this.selectedUser.exercises.filter((exercise:Exercise) => exercise.category === category)
-    console.group(this.exercises)
+  }
+  onSelectExercise(exerciseId :string|undefined){
+    this.exercise = this.selectedUser.exercises.filter((exercise:Exercise) => exercise.exerciseId === exerciseId)[0]
+    const any = this.selectedUser.exercises.filter((exercise:Exercise) => exercise.exerciseId === exerciseId);
+    console.log("Selected Exercise: ", any)
   }
 }

@@ -1,5 +1,8 @@
 <main class="panel">
-    <h2>Exercise #1</h2>
-    <h2>Exercise #1</h2>
-    <h2>Exercise #1</h2>
+    @if(exercise){
+        <h1>{{ exercise.exerciseName }}</h1>
+        <hr/>
+        <h2>Reps: {{ exercise.reps }}</h2>
+        
+    }
 </main>

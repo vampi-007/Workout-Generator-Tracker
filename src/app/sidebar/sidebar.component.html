@@ -4,12 +4,14 @@
         <ul>
             @for(exercise of exercises; track exercise.exerciseId){
                     <li>
-                        <button type="button">
+                        <button type="button" (click)="onChangeExercise(exercise.exerciseId)">
                             {{exercise.exerciseName}}
                         </button>
                     </li>
             }
 
         </ul>
+    }@else {
+        <h2>Kindly select one category..</h2>
     }
 </main>

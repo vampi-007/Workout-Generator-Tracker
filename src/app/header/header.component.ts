@@ -21,6 +21,13 @@ export class HeaderComponent {
     console.log("Change User: ", user.name)
     this.user.emit(user.id);
   }
+  get categories(){
+    const categories : string[] | undefined = [];
+    this.currentUser?.exercises.forEach(exercise => {
+      categories.push(exercise.category);
+    });
+    return new Set(categories)
+  }
   get selectedUser() {
     this.currentUser = this.users.find((user:User) => user.id === this.selectedUserId)
     if(this.currentUser ===undefined)
