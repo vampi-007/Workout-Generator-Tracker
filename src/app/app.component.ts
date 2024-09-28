@@ -18,8 +18,10 @@ export class AppComponent {
   users : User[] = DUMMY_USER;
   selectedUserId?: string ;
   currentUser:User|undefined;
-  // get selectedCategory(){
-  // }
+  exercises:Exercise[]|undefined;
+  get selectedExercises(){
+    return this.exercises;
+  } 
   get selectedUser() {
     this.currentUser = this.users.find((user:User) => user.id === this.selectedUserId)
     if(this.currentUser ===undefined)
@@ -29,12 +31,12 @@ export class AppComponent {
   
   onSelectUser(id: string) {
     this.selectedUserId = id;
+    console.log("this.selectedUserId",id);
+
     console.log(this.selectedUserId);
   }
   onSelectCategory(category: string){
-    // const exercises = this.selectedUser.exercises.filter((exercise:Exercise) => exercise.category === category)
-    // console.log(exercises);
-    console.log(category)
-    // return exercises;
+    this.exercises = this.selectedUser.exercises.filter((exercise:Exercise) => exercise.category === category)
+    console.group(this.exercises)
   }
 }

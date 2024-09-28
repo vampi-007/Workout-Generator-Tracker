@@ -1,7 +1,7 @@
 <main>
   <app-header [users]="users" (user)="onSelectUser($event)" (category)="onSelectCategory($event)" />
   <div class="container-main">
-    <app-sidebar [exercises]="selectedUser.exercises" [currentUser]="selectedUser"/>
+    <app-sidebar [exercises]="selectedExercises" [currentUser]="selectedUser"/>
     <h2>{{ selectedUser.name }}</h2>
     <app-panel/>
   </div>

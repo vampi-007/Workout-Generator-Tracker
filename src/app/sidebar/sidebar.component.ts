@@ -9,7 +9,7 @@ import { Exercise, User } from '../header/users/user.model';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  @Input({required:true})exercises!:Exercise[];
+  @Input({required:true})exercises!:Exercise[]|undefined;
   @Input({required:true}) currentUser!:User;
   constructor(){
     // console.log(this.exercises)

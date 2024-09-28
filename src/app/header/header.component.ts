@@ -31,6 +31,7 @@ export class HeaderComponent {
   onSelectUser(id: string) {
     this.selectedUserId = id;
     this.changeUser(this.selectedUser);
+    this.changeCategory(this.currentUser?.exercises[0].category);
     this.onCloseDialogue();
   }
   onClick(){
@@ -40,8 +41,8 @@ export class HeaderComponent {
     this.openDialogue = false
   }
   
-  changeCategory(category:string) {
-    this.user.emit(category);
+  changeCategory(category:string | undefined) {
+    this.category.emit(category);
   }
   
 }
