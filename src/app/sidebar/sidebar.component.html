@@ -1,0 +1,15 @@
+<main class="sidebar">
+    @if(currentUser){
+        <ul>
+            @for(exercise of currentUser.exercises; track exercise.exerciseId){
+                    <li>
+                        <button type="button">
+                            {{exercise.exerciseName}}
+                        </button>
+                    </li>
+            }
+
+        </ul>
+    }
+    <h2>{{ currentUser.name }}</h2>
+</main>

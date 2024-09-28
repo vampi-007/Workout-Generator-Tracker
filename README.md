@@ -1,27 +1,25 @@
-# Proj1
+# Workout Generator & Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+## Overview:
+Create a workout generator that randomly suggests exercises for users to perform based on selected categories (e.g., strength, cardio, flexibility). The app will also allow users to log their workouts and track their progress over time.
 
-## Development server
+## Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Component Structure:
+- **Exercise Generator:** Generates a random workout.
+- **Workout Log:** Stores previous workouts and logs.
+- **Progress Tracker:** Displays progress over time, like total workouts completed.
 
-## Code scaffolding
+### Event Binding:
+- Handle events like generating a random workout based on selected categories.
+- Use `EventEmitter` to pass workout data between components (e.g., log completed workouts).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Dynamic Data Binding:
+- Bind user inputs (e.g., workout type or duration) with `ngModel`.
+- Display dynamically rendered workout logs using `ngFor`.
 
-## Build
+### Dynamic CSS Styling:
+- Use **class binding** to highlight certain workouts (e.g., different styles for strength, cardio, or flexibility exercises).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Fun Twist:
+Include a “Challenge Mode” where users can set a timer and race to complete as many exercises as possible in a set time limit, with a fun animation when the timer ends.

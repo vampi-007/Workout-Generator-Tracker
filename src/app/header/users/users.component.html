@@ -1,0 +1,22 @@
+<dialog open>
+  <div class="backdrop" >
+    <div class="container">
+      <h1>Change Users</h1>
+      <ul>
+        @for (user of users; track user.id) {
+        <li>
+          <button type="button" (click)="changeUser(user)">
+            <img [src]="'../../../assets/users/' + user.avatar" />
+            <h2>{{ user.name }}</h2>
+          </button>
+        </li>
+
+        }
+      </ul>
+      <div class="actions">
+          <button type="button" id="signup">Sign up</button>
+          <button type="button" id="cancel" (click)="onClose()">cancel</button>
+      </div>
+    </div>
+  </div>
+</dialog>

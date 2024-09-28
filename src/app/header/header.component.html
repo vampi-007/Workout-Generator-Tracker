@@ -1,1 +1,25 @@
-<p>header works!</p>
+<header>
+    @if (openDialogue){
+        <app-users  [users]="users" (cancel)="onCloseDialogue()" (user)="onSelectUser($event)"/>
+    }
+
+    <div class="navbar">
+        <!-- Dynamic -->
+        <ul>
+            @for(exercise of currentUser?.exercises; track exercise.exerciseId){
+                <li>
+                    <button type="button" (click)="changeCategory(exercise.category)">
+                        {{exercise.category}}
+                    </button>    
+                </li>
+            }
+        </ul>
+        <div class="profile-pic">
+            <a type="button" (click)="onClick()">
+                @if (selectedUser){
+                        <img [src]="'../../assets/users/' + selectedUser.avatar"/>
+                    }
+            </a>
+        </div>
+    </div>
+</header>

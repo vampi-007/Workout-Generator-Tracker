@@ -1,0 +1,32 @@
+.navbar{
+    background-color: #ffec99;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+.navbar ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.profile-pic{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+button{
+    cursor:pointer;
+    background-color: #a5d8ff;
+    border: 1px solid black;
+    height: 30px;
+}
