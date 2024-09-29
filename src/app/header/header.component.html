@@ -8,13 +8,16 @@
         <ul>
             @for(category of categories; track category){
                 <li>
-                    <button type="button" (click)="changeCategory(category)">
+                    <button [class.active]="selectedCategory === category" type="button" (click)="changeCategory(category)">
                         {{category}}
                     </button>    
                 </li>
             }
         </ul>
         <div class="profile-pic">
+            <button id="btn-category">
+                Add Category
+            </button>
             <a type="button" (click)="onClick()">
                 @if (selectedUser){
                         <img [src]="'../../assets/users/' + selectedUser.avatar"/>

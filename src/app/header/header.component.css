@@ -22,6 +22,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     padding: 5px;
 }
 button{
@@ -29,4 +30,22 @@ button{
     background-color: #a5d8ff;
     border: 1px solid black;
     height: 30px;
+}
+button:hover{
+    background-color: #4cabf5;
+    color: white;
+}
+button.active{
+    background-color: #4cabf5;
+    color: white;
+}
+#btn-category{
+    background-color: rgb(238, 98, 238);
+    color: black;
+}
+#btn-category:hover{
+    background-color: purple;
+    color: white;
+    border: 2px solid black;
+    height: 32px;
 }

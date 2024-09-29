@@ -16,6 +16,7 @@ export class HeaderComponent {
   currentUser:User|undefined;
   @Output() user = new EventEmitter<string>();
   @Output() category = new EventEmitter<string>();
+  selectedCategory: string|undefined;
 
   changeUser(user:User) {
     console.log("Change User: ", user.name)
@@ -49,6 +50,8 @@ export class HeaderComponent {
   }
   
   changeCategory(category:string | undefined) {
+    this.selectedCategory = category;
+    console.log(this.selectedCategory)
     this.category.emit(category);
   }
   
