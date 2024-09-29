@@ -14,4 +14,11 @@
     }@else {
         <h2>Kindly select one category..</h2>
     }
+    <hr/>
+    <button type="button" (click)="onOpenAddExercise()">
+        Add Exercise
+    </button>
 </main>
+@if(openAddExercise){
+   <app-add-exercise (cancel)="onCloseExercise()" (addCategory)="onAddExercise($event)"/>
+}

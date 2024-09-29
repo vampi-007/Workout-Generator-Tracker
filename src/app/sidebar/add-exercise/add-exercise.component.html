@@ -1,0 +1,43 @@
+<main>
+    <dialog open>
+      <div class="backdrop">
+        <div class="container">
+          <form class="container" (ngSubmit)="onSubmit()">
+            <h1>Add Exercise</h1>
+            <p>
+              <label for="title">Category Name</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                [(ngModel)]="categoryName"
+              />
+            </p>
+            <p>
+              <label for="title">Exercise Name</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                [(ngModel)]="exerciseName"
+              />
+            </p>
+            <p>
+              <label for="title">Reps</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                [(ngModel)]="reps"
+              />
+            </p>
+            <p class="actions">
+              <button type="button" (click)="onCancel()">Cancel</button>
+              <button type="submit">Create</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  
