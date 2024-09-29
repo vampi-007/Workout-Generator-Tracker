@@ -23,3 +23,7 @@ Create a workout generator that randomly suggests exercises for users to perform
 
 ## Fun Twist:
 Include a “Challenge Mode” where users can set a timer and race to complete as many exercises as possible in a set time limit, with a fun animation when the timer ends.
+ 
+## Component Breakdown
+
+![alt text](./src\assets\users\image.png)
