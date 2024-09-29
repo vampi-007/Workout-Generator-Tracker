@@ -16,3 +16,9 @@ export interface SubmitUser {
     name: string,
     avatar: string,
 }
+
+export interface SubmitExercise{
+    category: string,
+    exerciseName: string,
+    reps: string
+}
