@@ -1,0 +1,21 @@
+<dialog open>
+  <div class="backdrop">
+    <form class="container" (ngSubmit)="onSubmit()">
+        <h1>Add User</h1>
+      <p>
+        <label for="title">Username</label>
+        <input type="text" id="title" name="title" [(ngModel)]="userName" />
+      </p>
+
+      <p>
+        <label for="summary">image</label>
+        <input id="summary" type="text" name="summary" [(ngModel)]="avatar" />
+      </p>
+
+      <p class="actions">
+        <button type="button" (click)="onCancel()">Cancel</button>
+        <button type="submit">Create</button>
+      </p>
+    </form>
+  </div>
+</dialog>

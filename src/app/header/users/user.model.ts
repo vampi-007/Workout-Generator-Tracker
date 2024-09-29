@@ -11,3 +11,8 @@ export interface User {
     avatar: string,
     exercises: Exercise[] 
 }
+
+export interface SubmitUser {
+    name: string,
+    avatar: string,
+}
