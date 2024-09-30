@@ -26,4 +26,4 @@ Include a “Challenge Mode” where users can set a timer and race to complete 
  
 ## Component Breakdown
 
-![alt text](./src\assets\users\image.png)
+![alt text](./src/assets/users/image.png)
